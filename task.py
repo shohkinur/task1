@@ -2,55 +2,40 @@ list_of_apples = [12,4,7,9,-12,-5,10]
 list_of_eggs = [1,4,5,12,19]
 list_of_flour = [12,4,-5,1]
 
-sum1=0
-for i in list_of_apples:
-    sum1+=i
-print("Sum of apples is ", sum1)
+sum_of_apples=sum(list_of_apples)
+sum_of_egg=sum(list_of_eggs)
+sum_of_flour=sum(list_of_flour)
 
-sum2=0
-for j in list_of_eggs:
-    sum2+=j
-print("Sum of eggs is ",sum2)
-
-sum3=0
-for y in list_of_flour:
-    sum3+=y
-print("Sum of flour is ",sum3)
-
-number1=int(sum1/4)
-number2= int(sum2/2)
-number3=int(sum3/0.5)
+apple_count_pies=int(sum_of_apples/4)
+egg_count_pies= int(sum_of_egg/2)
+flour_count_pies=int(sum_of_flour/0.5)
 
 
-print( number1, " pies can be cooked from apples")
-print(number2, "pies can be cooked from eggs")
-print(number3, "pies can be cooked from flour")
-
-
-if number1<number2<number3:
-    print(number1, "pies can be cooked")
-elif number2<number3<number1:
-    print (number2, "pies can be cooked")
+if apple_count_pies<egg_count_pies<flour_count_pies:
+    print(apple_count_pies, "pies can be cooked")
+elif egg_count_pies<flour_count_pies<apple_count_pies:
+    print (egg_count_pies, "pies can be cooked")
 else:
-    (number3, "pies can be cooked")
+    (flour_count_pies, "pies can be cooked")
 
 
 
-if number1>number2>number3:
-    print("As", number1, "pies can be cooked according to number of apples")
-    number_ofegg=(number1-number2)*2
-    number_offlour = (number1-number3)*0.5
-    print("We need", number_offlour, " more flour and ", number_ofegg, "more eggs to cook", number1, "pies")
-elif number2>number3>number1:
-    print("As", number2, "pies can be cooked according to number of eggs")
-    number_ofapp=(number2-number1)*4
-    number_offlour = (number2-number3)*0.5
-    print("We need", number_offlour, " more flour and ", number_ofapp, "more eggs to cook", number2, "pies")
+if apple_count_pies>egg_count_pies>flour_count_pies:
+    print("As", apple_count_pies, "pies can be cooked according to number of apples")
+    number_ofegg=(apple_count_pies-egg_count_pies)*2
+    number_offlour = (apple_count_pies-flour_count_pies)*0.5
+    print("We need", number_offlour, " more flour and ", number_ofegg, "more eggs to cook", apple_count_pies, "pies")
+elif egg_count_pies>flour_count_pies>apple_count_pies:
+    print("As", egg_count_pies, "pies can be cooked according to number of eggs")
+    number_ofapp=(egg_count_pies-apple_count_pies)*4
+    number_offlour = (egg_count_pies-flour_count_pies)*0.5
+    print("We need", number_offlour, " more flour and ", number_ofapp, "more eggs to cook", egg_count_pies, "pies")
 else:
-    print("As", number3, "pies can be cooked according to number of flour")
-    number_ofapp = (number3-number1)*4
-    number_ofegg=(number3-number2)*2
-    print("We need", number_ofapp, " more apples and ", number_ofegg, "more eggs to cook", number3, "pies")
+    print("As", flour_count_pies, "pies can be cooked according to number of flour")
+    number_ofapp = (flour_count_pies-apple_count_pies)*4
+    number_ofegg=(flour_count_pies-egg_count_pies)*2
+    print("We need", number_ofapp, " more apples and ", number_ofegg, "more eggs to cook", flour_count_pies, "pies")
 
    
+
 
