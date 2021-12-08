@@ -54,8 +54,3 @@ else:
 
    
 
-
-
-# pie  ga ketadigon masaliq appeldan = 4 , eggs = 2, flour = 0.5
-
-# shu masaliqdan nechta pie chiqshini xisoblab berish kere
